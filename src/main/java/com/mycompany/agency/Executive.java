@@ -1,9 +1,10 @@
 package com.mycompany.agency;
 
 
-    // TODO 1: Make Executive a child of StaffEmploee
-public class Executive 
+// TODO 1: Make Executive a child of StaffEmploee
+public class Executive extends StaffEmployee
 {
+
     private double bonus;
 
     //-----------------------------------------------------------------
@@ -11,7 +12,7 @@ public class Executive
     //  information.
     //-----------------------------------------------------------------
     public Executive(String eName, String eAddress, String ePhone,
-            String socSecNumber, double rate)
+                     String socSecNumber, double rate)
     {
         super(eName, eAddress, ePhone, socSecNumber, rate);
 
@@ -32,6 +33,6 @@ public class Executive
     //-----------------------------------------------------------------
     public double pay()
     {
-       
+        return payRate + bonus;
     }
 }
