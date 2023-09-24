@@ -7,7 +7,6 @@ package com.mycompany.agency;
 public class TempEmploee extends StaffEmployee
 {
     private int hoursWorked;
-        private double rate;
 
     //-----------------------------------------------------------------
     //  Constructor: Sets up this hourly employee using the specified
@@ -17,7 +16,6 @@ public class TempEmploee extends StaffEmployee
             String socSecNumber, double rate)
     {
         super(eName, eAddress, ePhone, socSecNumber, rate);
-        this.rate = rate;
         hoursWorked = 0;
     }
 
@@ -27,7 +25,7 @@ public class TempEmploee extends StaffEmployee
     //-----------------------------------------------------------------
     public void addHours(int moreHours)
     {
-        hoursWorked = moreHours;
+        hoursWorked += moreHours;
     }
 
     //-----------------------------------------------------------------
@@ -35,7 +33,7 @@ public class TempEmploee extends StaffEmployee
     //-----------------------------------------------------------------
     public double pay()
     {
-        return hoursWorked * rate;
+        return payRate*hoursWorked;
     }
 
     //-----------------------------------------------------------------
@@ -43,8 +41,8 @@ public class TempEmploee extends StaffEmployee
     //-----------------------------------------------------------------
     public String toString()
     {
-        return "Name: " + getName() + "\nAddress: " + getAddress() + "\nPhone: " + getPhone() +
-                "\nSocial Security Number: " + getSocSecNumber() + "\nHourly Rate: " + rate +
-                "\nHours Worked: " + hoursWorked;
+        return super.toString() + "\nCurrent hours: "
+                + hoursWorked;
     }
 }
+//cmd k
