@@ -3,7 +3,7 @@ package com.mycompany.agency;
 
 
 // TODO 1: Make this class work and public
- class StaffMember
+ abstract public class StaffMember
 {
     protected String name;
     protected String address;
@@ -13,8 +13,7 @@ package com.mycompany.agency;
     //  Constructor: Sets up this staff member using the specified
     //  information.
     //-----------------------------------------------------------------
-    public StaffMember(String eName, String eAddress, String ePhone)
-    {
+    public StaffMember(String eName, String eAddress, String ePhone)    {
         name = eName;
         address = eAddress;
         phone = ePhone;
@@ -25,7 +24,7 @@ package com.mycompany.agency;
     //-----------------------------------------------------------------
     public String toString()
     {
-
+        return "Name: " + name + "\nAddress: " + address + "\nPhone: " + phone;
     }
 
     //-----------------------------------------------------------------
