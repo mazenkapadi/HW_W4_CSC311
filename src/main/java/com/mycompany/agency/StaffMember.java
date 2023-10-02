@@ -1,35 +1,40 @@
 package com.mycompany.agency;
 
-
-
-// TODO 1: Make this class work and public
- abstract public class StaffMember
-{
+/**
+ * An abstract class representing a staff member.
+ * This class serves as a base class for different types of employees.
+ */
+public abstract class StaffMember {
     protected String name;
     protected String address;
     protected String phone;
 
-    //-----------------------------------------------------------------
-    //  Constructor: Sets up this staff member using the specified
-    //  information.
-    //-----------------------------------------------------------------
-    public StaffMember(String eName, String eAddress, String ePhone)    {
+    /**
+     * Constructor: Initializes a staff member with the specified information.
+     *
+     * @param eName    The name of the staff member.
+     * @param eAddress The address of the staff member.
+     * @param ePhone   The phone number of the staff member.
+     */
+    public StaffMember(String eName, String eAddress, String ePhone) {
         name = eName;
         address = eAddress;
         phone = ePhone;
     }
 
-    //-----------------------------------------------------------------
-    // TODO 2: Returns a string including the basic employee information.
-    //-----------------------------------------------------------------
-    public String toString()
-    {
+    /**
+     * Returns a string representation including the basic employee information.
+     *
+     * @return A string containing the name, address, and phone number of the staff member.
+     */
+    public String toString() {
         return "Name: " + name + "\nAddress: " + address + "\nPhone: " + phone;
     }
 
-    //-----------------------------------------------------------------
-    //  Derived classes must define the pay method for each type of
-    //  employee.
-    //-----------------------------------------------------------------
+    /**
+     * Derived classes must define the pay method for each type of employee.
+     *
+     * @return The pay amount for the staff member.
+     */
     public abstract double pay();
 }
